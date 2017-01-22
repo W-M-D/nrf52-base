@@ -10,25 +10,25 @@ set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_PROCESSOR arm)
 
 # Set compiler paths. We force set so it doesn't run tests
-CMAKE_FORCE_C_COMPILER(${COMPILER_PREFIX}arm-none-eabi-gcc GNU)
-CMAKE_FORCE_CXX_COMPILER(${COMPILER_PREFIX}arm-none-eabi-g++ GNU)
+CMAKE_FORCE_C_COMPILER(${COMPILER_PREFIX}arm-linux-gnueabi-gcc GNU)
+CMAKE_FORCE_CXX_COMPILER(${COMPILER_PREFIX}arm-linux-gnueabi-g++ GNU)
 
-set(CMAKE_ASM_COMPILER ${COMPILER_PREFIX}arm-none-eabi-g++)
-set(CMAKE_RANLIB ${COMPILER_PREFIX}arm-none-eabi-ranlib)
-set(CMAKE_AR ${COMPILER_PREFIX}arm-none-eabi-ar)
+set(CMAKE_ASM_COMPILER ${COMPILER_PREFIX}arm-linux-gnueabi-g++)
+set(CMAKE_RANLIB ${COMPILER_PREFIX}arm-linux-gnueabi-ranlib)
+set(CMAKE_AR ${COMPILER_PREFIX}arm-linux-gnueabi-ar)
 
-#set(CMAKE_C_LINK_EXECUTABLE ${COMPILER_PREFIX}arm-none-eabi-ld)
-#set(CMAKE_CXX_LINK_EXECUTABLE ${COMPILER_PREFIX}arm-none-eabi-ld)
+#set(CMAKE_C_LINK_EXECUTABLE ${COMPILER_PREFIX}arm-linux-gnueabi-ld)
+#set(CMAKE_CXX_LINK_EXECUTABLE ${COMPILER_PREFIX}arm-linux-gnueabi-ld)
 
 # Removes invalid (default) flags on OSX
 SET(CMAKE_C_LINK_FLAGS "")
 SET(CMAKE_CXX_LINK_FLAGS "")
 
 # Set other tools
-set(OBJSIZE ${COMPILER_PREFIX}arm-none-eabi-size)
-set(OBJCOPY ${COMPILER_PREFIX}arm-none-eabi-objcopy)
-set(OBJDUMP ${COMPILER_PREFIX}arm-none-eabi-objdump)
-set(DEBUGGER ${COMPILER_PREFIX}arm-none-eabi-gdb)
+set(OBJSIZE ${COMPILER_PREFIX}arm-linux-gnueabi-size)
+set(OBJCOPY ${COMPILER_PREFIX}arm-linux-gnueabi-objcopy)
+set(OBJDUMP ${COMPILER_PREFIX}arm-linux-gnueabi-objdump)
+set(DEBUGGER ${COMPILER_PREFIX}arm-linux-gnueabi-gdb)
 
 # Remove preset linker flags
 set(CMAKE_SHARED_LIBRARY_LINK_C_FLAGS "") 

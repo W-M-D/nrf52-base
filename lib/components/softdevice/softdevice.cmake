@@ -7,7 +7,7 @@ include_directories(${CMAKE_CURRENT_LIST_DIR}/common/softdevice_handler)
 string(TOLOWER ${SOFTDEVICE} SOFTDEVICE_L)
 
 if(NOT SOFTDEVICE_VERSION)
-set(SOFTDEVICE_VERSION "2.0.0")
+set(SOFTDEVICE_VERSION "3.0.0")
 endif()
 
 message("Using softdevice: ${SOFTDEVICE} Version: ${SOFTDEVICE_VERSION}")

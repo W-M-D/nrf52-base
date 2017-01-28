@@ -3,14 +3,14 @@
 include_directories(
 	${CMAKE_CURRENT_LIST_DIR}
 	${CMAKE_CURRENT_LIST_DIR}/gcc
-    ${CMAKE_CURRENT_LIST_DIR}/CMSIS/Include
+        ${CMAKE_CURRENT_LIST_DIR}/cmsis/include
 	)
 
 set(TOOLCHAIN_SOURCES
 	${CMAKE_CURRENT_LIST_DIR}/system_${CPU_FAMILY_L}.c
 )
 
-set(STARTUP_FILE ${CMAKE_CURRENT_LIST_DIR}/gcc/gcc_startup_${CPU_FAMILY_L}.s)
+set(STARTUP_FILE ${CMAKE_CURRENT_LIST_DIR}/gcc/gcc_startup_${CPU_FAMILY_L}.S)
 
 set(LINKER_TEMPLATE_LOC ${CMAKE_CURRENT_LIST_DIR}/gcc/)
 
